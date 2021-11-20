@@ -22,7 +22,8 @@ dotenv.config();
 function runApp() {
 	// Start listening for connections, and serve static files.
 	const server = new MRE.WebHost({
-		// baseUrl: 'http://<ngrok-id>.ngrok.io',
+		baseUrl: 'https://dungeonworld.azurewebsites.net',
+    	port: process.env.PORT,
 		baseDir: resolvePath(__dirname, '../public')
 	});
 
